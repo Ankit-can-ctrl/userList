@@ -1,12 +1,67 @@
-# React + Vite
+# Technologies Used
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React.js
+React Router for navigation
+Axios for API requests
+Tailwind CSS for styling
+Context API for state management
 
-Currently, two official plugins are available:
+# Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Node.js (v14 or later)
 
-## Expanding the ESLint configuration
+# Installation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository:
+git clone https://github.com/Ankit-can-ctrl/userList.git
+
+Install dependencies:
+npm install
+
+# Adding Tailwind CSS to Your Project
+
+# Install Tailwind CSS:
+
+write these below two commands inside project directory:
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# Configure your template paths in tailwind.config.js:
+
+Paste this instead of config in tailwind config file :
+
+content: [
+"./src/**/*.{js,jsx,ts,tsx}",
+],
+
+# Add the Tailwind directives to your CSS in src/index.css:
+
+clear the index.css file and paste these three tailwind lines:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+# Start the development server:
+
+npm start
+
+Open your browser and navigate to http://localhost:5173
+
+# API Endpoints
+
+This app uses the following Reqres API endpoints:
+
+POST /api/login - Authentication
+GET /api/users?page=1 - Retrieve users with pagination
+GET /api/users/{id} - Get a single user
+PUT /api/users/{id} - Update user
+DELETE /api/users/{id} - Delete user
+
+# Usage
+
+Login Credentials (for testing)
+
+Email: eve.holt@reqres.in
+Password: cityslicka
